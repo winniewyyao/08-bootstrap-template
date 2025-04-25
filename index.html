@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Template</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+
+            *:has(> video.fullscreen){
+                position: relative;
+            }
+
+            video.fullscreen{
+                height: 100%;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            @media (min-aspect-ratio: 16/9){
+                video.fullscreen{
+                    height: auto;
+                    width: 100%;
+
+                }
+            }
+
+            #slide1-background-holder{
+                background-image: url("images/baseball-bgimage.jpeg");
+                background-size: cover;
+                background-position: 20% center;
+                background-repeat: no-repeat;
+            }
+
+            #slide2-background-holder{
+                background-image: url("images/world-series-bgimage.jpeg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            #slide3-background-holder{
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="position-relative vh-100 d-flex flex-column justify-content-center">
+            <div class="text-white text-center">
+                <h1 class="display-1">Is Moneyball Dead?</h1>
+                <p class="lead">As the payroll gap continues to widen, small-market teams struggle to remain competitive</p>
+            </div>
+            <div class="h-100 position-absolute w-100 top-0 start-0 video-holder z-n1">
+                <video class="fullscreen" src="images/baseball video.mp4" muted preload loop></video>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6 col-xxl-5">
+                    <h4 class="text-center mt-5">Baseball has remained a sustainable sport for many reasons, and while it would be nice if it were as simple as the catchy tune about going to the ballpark, grabbing some Cracker Jack, and shouting "Three strikes, you're out," the reality is that baseball is a business. And over the past few decades, money has been changing the game.</h4>
+                    <p class="text-center">By Riley Ramirez, WanYu Yao, Daniela Sandoval</p>
+                    <p class="text-center"><time datetime="2025-03-12"> March 17, 2025</time></p>
+                    <p>In 2023, Shohei Ohtani entered into free agency after playing six years with the Los Angeles Angels. The offseason brought spirited speculation over where he would sign.</p>
+                    <p>It was no surprise that the 2018 Rookie of the Year, two-time American League MVP, two-time Silver Slugger award winner and five-time All-MLB First Team recipient was highly pursued by several teams – and everyone was ready to put a big check on the table.</p>
+                </div>
+            </div> <!--close .row-->
+
+            <div class="row justify-content-center">
+                <figure class="col-12 col-sm-10">
+                    <img src="images/shohei.jpeg" class="img-fluid" alt="Shohei Ohtani"></img>
+                    <figcaption class="figure-caption text-center">Shohei Ohtani<br> Source: Los Angelos Times</figcaption>
+                </figure>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6 col-xxl-5">
+                    <p>Several teams were rumored to be in the Ohtani sweepstakes. However, experts believe that one team stood out above all the rest: the Los Angeles Dodgers.</p>
+                    <p>Regardless of the rumors, it was clear that becoming a World Series Champion was a top priority for Ohtani. So the question was, which team would give him the best shot of getting there?</p>
+                </div>
+            </div> <!--close .row-->
+        </div> <!--close .container-->
+
+        <div class="container-fluid">
+
+            <!-- slide 1 -->
+            <div class="row justify-content-center">
+
+                <div id="slide1-background-holder" class="vh-100 z-n1 sticky-top"></div>
+                <!-- slide 1 - scroll 1 -->
+                <div class="col-12 col-sm-6 bg-light">
+                    <p class="m-3">After about a month of quiet negotiations, Ohtani took to his Instagram to announce the news:
+                        He had signed a record-breaking contract of $700 million with the Los Angeles Dodgers.</p>
+                </div>
+                <div class="vh-100"></div>
+                <!-- slide 1 - scroll 2 -->
+                <div class="col-12 col-sm-6 bg-light">
+                    <p class="m-3">This was the highest contract ever signed in MLB history. Previously, the record was held by Ohtani’s former teammate, Mike Trout, who signed a 12-year $426.5 million contract with the Los Angeles Angels in 2019.</p>
+                </div>
+                <div class="vh-100"></div>
+                <!-- slide 1 - scroll 3 -->
+                <div class="col-12 col-sm-6 bg-light">
+                    <p class="m-3">The deal worked out between the Dodgers and Ohtani was for 10 years with a $680 million deferral of payment until the contract was up, which ESPN reported was Ohtani’s idea. This means that his annual salary will be $2 million until 2034, and then $68 million annually for the 10 years after that.</p>
+                </div>
+                <div class="vh-100"></div>
+            </div>
+            <!-- slide 2 -->
+            <div class="row justify-content-center">
+
+                <div id="slide2-background-holder" class="vh-100 z-n1 sticky-top"></div>
+                <!-- slide 2 - scroll 1 -->
+                 <div class="col-12 col-sm-5 bg-light">
+                    <p class="m-3">It is not surprising that throughout MLB history, the big-name teams land the big-name players. However, this contract made it obvious that in the business of baseball, a canyon was forming between the smallest-market teams and the largest.</p>
+                </div>
+                <div class="vh-100"></div>
+                <!-- slide 2 - scroll 2 -->
+                <div class="col-12 col-sm-5 bg-light">
+                    <p class="m-3">The 2024 season resulted in a World Series between the two historic MLB tycoons: the Los Angeles Dodgers and the New York Yankees. The Los Angeles Dodgers would go on to win, making Ohtani a World Series champion in his first season with the team.</p>
+                </div>
+                <div class="vh-100"></div>
+                <!-- slide 2 - scroll 3 -->
+                <div class="col-12 col-sm-5 bg-light">
+                    <p class="m-3">Then, into the offseason this past December, something shocking happened.
+                        Free agent Juan Soto and the New York Mets surpassed Ohtani’s contract with a deal of $765 million for 15 years and no deferral of payment, deeming Soto the new record-holder.</p>
+                </div>
+                <div class="vh-100"></div>
+            </div>
+            <!-- slide 3 -->
+            <div class="row justify-content-center">
+
+                <div id="slide3-background-holder" class="vh-100 z-n1 sticky-top m-3">
+                    <iframe title="In 2025, the highest-paid player per team (in million)" aria-label="Bar Chart" id="datawrapper-chart-VTTNq" src="https://datawrapper.dwcdn.net/VTTNq/3/" scrolling="no" frameborder="0" style="width: 100%; border: none;" height="785" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
+                    </script>
+                </div>
+                <!-- slide 3 - scroll 1 -->
+                <div class="col-12 col-sm-6 bg-light">
+                    <p class="m-3">There is a maximum $5M million gap between the highest-paid players on each team.</p>
+                </div>
+                <div class="vh-100"></div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-8 col-xx-6">
+                    <p>In the last 12 seasons, the top 15 wealthiest teams appeared in 118 more playoff bracket appearances than the bottom 15. While every team across the payroll spectrum made it to the playoffs at least once since 2013, a noticeable dominance in appearances by the Dodgers, Mets, Yankees, Astros and Braves is observed. This is partially because the weighted calculation of playoff bracket appearances takes into account how far teams make it in the playoffs. Both the Dodgers and the Astros have made it to four World Series since 2013 and won twice.</p>
+                    <p>Additionally, since 2013, 11 out of 12 World Series winners were in the upper half of payrolls when they won, while six of those 11 were in the top 20%
+                        The Houston Astros were the only team in the last 12 seasons to win a World Series while ranking in the bottom half of payrolls. The team won its first-ever title in 2017 and ranked 13th in payroll that year. However, two years later, reporters Ken Rosenthal and Evan Drellich published an investigation in The Athletic exposing the Astros for using cameras to illegally steal signs from opponents in the 2017 season.</p>
+                </div>
+            </div>
+        </div> <!-- close .container-->
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <figure class="col-12 col-md-10 col-lg-8 col-xx-6">
+                    <div>
+                        <img src="images/AdobeStock_977466865.png" width="500" height="500" style="display: block; margin: auto">
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-8 col-xx-6">
+                    <p>Baseball is not an exact science, and as much as talent and money helps, magic can happen.
+                        "You've seen teams with low payrolls win, and teams with high payrolls lose, but those big markets have an advantage," Andrew Benintendi, Chicago White Sox left fielder, said to ESPN.</p>
+                    <p>Contentious negotiations between the MLB and the Players Association have ensued in recent years about the adoption of a league-wide salary cap. The Players Association, or MLBPA, is the labor union that serves as the bargaining agent for major and minor league players. The union has consistently opposed the implementation of a salary cap, saying a free-market allows players to maximize their value, according to Bleacher Report.</p>
+                    <p>The Tampa Bay Rays, Cleveland Guardians and Arizona Diamondbacks have all made it to the World Series once in the last nine seasons with some of the smallest operating budgets – which is far better than the Los Angeles Angels, who have one of the highest payrolls, can say.</p>
+                    <p>So with Opening Day quickly approaching at the end of this month, could an unforeseen underdog get lucky this season?</p>
+                </div>
+            </div>
+        </div> <!-- close .container-->
+
+        <footer class="container-fluid bg-warning">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <p class="text-white text-center py-3">Project by WanYu Yao</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

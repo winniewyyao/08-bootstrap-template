@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>County Map</title>
+  </head>
+  <body>
+    
+    
+    <div class="container vh-100"></div>
+      
+ 
+    <script src="js/d3.v5.min.js"></script>
+    <script src="js/topojson.min.js"></script>
+    <script>
+
+
+    var svg = d3.select(".container")
+        .append("svg")
+        .attr("width", "100%")
+        .attr("height", "100%")
+        .attr("viewBox", "0 0 975 610");
+
+
+    Promise.all([
+      d3.json("counties-10m.json"),
+      d3.csv("unemployment-2018.csv", function(d){ return {id: d.id, rate: +d.rate } })
+    ]).then(function(data){
+
+        //data[0] will be our topo json
+        //data[1] will be our csv results, (because it was listed second)
+      
+        
+        var unemployment = d3.map(data[1], function(d){ return d.id; });
+
+      
+        //https://observablehq.com/@d3/choropleth
+        //var color = d3.scaleQuantize([1, 10], d3.schemeGreens[9].reverse())
+        var color = d3.scaleQuantize()
+          .domain([1, 10])
+          .range(["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c", "#00441b"]);
+      
+        //https://github.com/topojson/us-atlas
+        var projection = d3.geoAlbersUsa()
+            .scale(1300)
+            .translate([487.5, 305]);
+
+
+        var path = d3.geoPath()
+            .projection(projection);
+    
+        //drawing the county lines
+        svg.selectAll("path")
+          .data(topojson.feature(data[0], data[0].objects.counties).features)
+          .join("path")
+          .attr("d", path)
+          .attr("stroke", "none")
+          .attr("fill", function(d){ if(typeof unemployment.get(d.id) != "undefined") return color(unemployment.get(d.id).rate)});
+      
+        // //drawing the state lines
+        svg.append("path")
+          .datum(topojson.feature(data[0], data[0].objects.states))
+          .attr("d", path)
+          .attr("fill", "none")
+          .attr("stroke", "black")
+          .attr("stroke-width", "0.3px");
+
+        svg.append("path")
+          .datum(topojson.feature(data[0], data[0].objects.nation))
+          .attr("d", path)
+          .attr("stroke", "black")
+          .attr("fill", "none");
+
+
+    });
+
+    </script>
+  </body>
+</html>
